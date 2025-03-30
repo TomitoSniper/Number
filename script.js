@@ -14,8 +14,10 @@ function countDigits() {
 
 function oddEven() {
     let num = numInput.value;
-    output.innerHTML += "Číslo je: ";
-    num % 2 === 0 ? output.innerHTML += "Sudé" + "<br>" : output.innerHTML += "Liché" + "<br>";
+    if (num !== "") {
+        output.innerHTML += "Číslo je: ";
+        num % 2 === 0 ? output.innerHTML += "Sudé" + "<br>" : output.innerHTML += "Liché" + "<br>";
+    }
 }
 
 function isPrime(num) {
