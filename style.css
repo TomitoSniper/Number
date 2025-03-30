@@ -1,12 +1,21 @@
-body {
+html, body {
     background-color: rgb(31, 31, 31);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;
     color: white;
+    height: 100%;
+    width: 100%;
     margin: 0;
+}
+
+.w3-container {
+    padding: 0 !important; /* Override W3.CSS default padding */
+}
+
+main {
+    flex-grow: 1;
 }
 
 input[id="numInput"]::-webkit-inner-spin-button,
@@ -17,4 +26,16 @@ input[id="numInput"]::-webkit-outer-spin-button {
 
 #numInput {
     margin-bottom: 1vh;
+}
+
+h1 {
+    font-size: 5vh;
+}
+
+footer {
+    background: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    font-size: 2vh;
 }
