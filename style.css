@@ -1,41 +1,67 @@
-html, body {
-    background-color: rgb(31, 31, 31);
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #142850;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
-    height: 100%;
+    padding: 20px;
+}
+
+input[type="number"] {
     width: 100%;
-    margin: 0;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
 
-.w3-container {
-    padding: 0 !important; /* Override W3.CSS default padding */
+input[type="number"]:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-main {
-    flex-grow: 1;
-}
-
-input[id="numInput"]::-webkit-inner-spin-button,
-input[id="numInput"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-#numInput {
-    margin-bottom: 1vh;
-}
-
-h1 {
-    font-size: 5vh;
+#output {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 footer {
-    background: rgb(0, 0, 0);
+    background-color: #142850;
+    color: #ffffff;
     text-align: center;
     padding: 10px;
-    width: 100%;
-    font-size: 2vh;
+    font-size: 0.9rem;
+    margin-top: auto;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
 }
