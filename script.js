@@ -33,7 +33,6 @@ function isPrime(num) {
     return true;
 }
 
-
 function isPalindrome(num) {
     let str = num.toString();
     
@@ -41,7 +40,6 @@ function isPalindrome(num) {
     
     output.innerText += "Je palindrom: " + (isPalindrom ? "Ano" : "Ne") + "\n";
 }
-
 
 function digitSum(num) {
     if (num !== "") {
@@ -58,8 +56,11 @@ numInput.addEventListener("input", () => {
     output.innerHTML = "";
 
     countDigits(num);
-    oddEven(num);
-    isPrime(num);  // Only call for prime check if the input is a number (not empty string)
-    isPalindrome(num);
-    digitSum(num);
+
+    if (num !== "") {
+        oddEven(num);
+        isPrime(num);  // Only call for prime check if the input is a number (not empty string)
+        isPalindrome(num);
+        digitSum(num);
+    }
 });
