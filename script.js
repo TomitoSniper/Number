@@ -3,20 +3,18 @@ const numInput = document.getElementById("numInput");
 const output = document.getElementById("output");
 
 
-
 // Functions
 function countDigits() {
     let num = numInput.value;
     let digitCount = num.replace('-', '').length;
 
-    output.innerHTML += "Počet číslic: " + digitCount + "<br>";
+    output.innerText += "Počet číslic: " + digitCount + "\n";
 }
 
 function oddEven() {
     let num = numInput.value;
     if (num !== "") {
-        output.innerHTML += "Číslo je: ";
-        num % 2 === 0 ? output.innerHTML += "Sudé" + "<br>" : output.innerHTML += "Liché" + "<br>";
+        output.innerText += "Číslo je: " + ((num % 2 === 0) ? "Sudé" : "Liché") + "\n";
     }
 }
 
@@ -28,13 +26,22 @@ function isPrime(num) {
     return true;
 }
 
+function isPalindrome(num) {
+    let str = num.toString();
+    return str === str.split('').reverse().join('');
+}
+
+
 // Output
 numInput.addEventListener("input", () => {
+    let num = parseInt(numInput.value, 10);
     output.innerHTML = "";
     countDigits();
     oddEven();
-    let num = parseInt(numInput.value, 10);
     if (!isNaN(num)) {
-        output.innerText += " | Prime: " + (isPrime(num) ? "Yes" : "No");
+        output.innerText += "Prvočíslo: " + (isPrime(num) ? "Yes" : "No") + "\n";
+    }
+    if (!isNaN(num)) {
+        output.innerText += "je Palind: " + (isPalindrome(num) ? "Yes" : "No") + "\n";
     }
 });
